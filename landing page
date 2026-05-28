@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NIA Legal Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      color:#1a1a1a;
+      background:#fff;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header{
+      background:#ffffff;
+      border-bottom:1px solid #eee;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:22px 0;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo img{
+      width:60px;
+    }
+
+    .logo-text h2{
+      font-size:32px;
+      color:#0b2341;
+      letter-spacing:2px;
+      font-weight:700;
+    }
+
+    .logo-text span{
+      font-size:12px;
+      letter-spacing:4px;
+      color:#555;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:35px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      font-size:15px;
+      color:#1b2a41;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#c79a4b;
+    }
+
+    .btn{
+      background:#c79a4b;
+      color:#fff;
+      padding:14px 28px;
+      border-radius:6px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      background:#aa7f34;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================== */
+
+    .hero{
+      min-height:90vh;
+      background:
+      linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+      url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+    }
+
+    .hero-content{
+      max-width:650px;
+      padding:80px 0;
+    }
+
+    .hero h1{
+      font-family:'Playfair Display',serif;
+      font-size:68px;
+      line-height:1.1;
+      color:#0b2341;
+      margin-bottom:30px;
+    }
+
+    .hero-line{
+      width:70px;
+      height:3px;
+      background:#c79a4b;
+      margin-bottom:30px;
+    }
+
+    .hero p{
+      font-size:20px;
+      color:#444;
+      margin-bottom:40px;
+    }
+
+    /* =========================
+       PRACTICE AREA
+    ========================== */
+
+    .section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title span{
+      color:#7a7a7a;
+      font-size:14px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-weight:600;
+    }
+
+    .section-title h2{
+      font-family:'Playfair Display',serif;
+      font-size:52px;
+      color:#0b2341;
+      line-height:1.2;
+      margin-top:15px;
+    }
+
+    .title-line{
+      width:60px;
+      height:3px;
+      background:#c79a4b;
+      margin:25px auto 0;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid #eee;
+      padding:40px 30px;
+      border-radius:10px;
+      transition:0.3s;
+      text-align:center;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card-icon{
+      font-size:52px;
+      margin-bottom:20px;
+    }
+
+    .card h3{
+      color:#0b2341;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .card p{
+      color:#666;
+      font-size:15px;
+    }
+
+    /* =========================
+       ABOUT SECTION
+    ========================== */
+
+    .about{
+      background:#081d3a;
+      color:#fff;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:50px;
+    }
+
+    .about-text span{
+      color:#c79a4b;
+      letter-spacing:2px;
+      font-size:14px;
+      text-transform:uppercase;
+    }
+
+    .about-text h2{
+      font-family:'Playfair Display',serif;
+      font-size:58px;
+      line-height:1.1;
+      margin:25px 0;
+    }
+
+    .about-text p{
+      color:#d6d6d6;
+      margin-bottom:40px;
+      font-size:18px;
+    }
+
+    .outline-btn{
+      border:1px solid #c79a4b;
+      color:#fff;
+      padding:14px 28px;
+      border-radius:6px;
+      display:inline-block;
+      transition:0.3s;
+    }
+
+    .outline-btn:hover{
+      background:#c79a4b;
+    }
+
+    .about-image img{
+      width:100%;
+      border-radius:12px;
+      object-fit:cover;
+    }
+
+    /* =========================
+       CTA SECTION
+    ========================== */
+
+    .cta{
+      background:#f8f8f8;
+      padding:80px 0;
+    }
+
+    .cta-box{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:40px;
+    }
+
+    .cta h2{
+      font-family:'Playfair Display',serif;
+      font-size:48px;
+      color:#0b2341;
+      max-width:700px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:#081d3a;
+      color:#fff;
+      padding:80px 0 30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1.5fr;
+      gap:40px;
+      margin-bottom:50px;
+    }
+
+    .footer-logo h2{
+      font-size:38px;
+      margin-bottom:10px;
+    }
+
+    .footer-logo p{
+      color:#ccc;
+      max-width:280px;
+    }
+
+    .footer-column h4{
+      margin-bottom:20px;
+      font-size:18px;
+    }
+
+    .footer-column ul{
+      list-style:none;
+    }
+
+    .footer-column ul li{
+      margin-bottom:12px;
+      color:#d6d6d6;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:25px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      color:#ccc;
+      font-size:14px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:991px){
+
+      .hero h1{
+        font-size:50px;
+      }
+
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .section-title h2{
+        font-size:40px;
+      }
+
+      .about-text h2{
+        font-size:42px;
+      }
+
+      .cta h2{
+        font-size:36px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <div class="logo">
+        <img src="logo.png" alt="NIA Logo">
+
+        <div class="logo-text">
+          <h2>NIA</h2>
+          <span>LEGAL SOLUTIONS</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Practice Areas</a>
+        <a href="#">Industries</a>
+        <a href="#">Insights</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <a href="#" class="btn">Schedule a Consultation</a>
+
+    </div>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <h1>
+          Where Law, Strategy
+          and Technology Align
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+          NIA Legal Solutions provides innovative legal counsel
+          that empowers businesses to navigate complexity,
+          manage risk, and achieve sustainable growth.
+        </p>
+
+        <a href="#" class="btn">
+          Schedule a Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PRACTICE AREAS
+  ========================== -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>Practice Areas</span>
+
+        <h2>
+          Comprehensive Legal Solutions.
+          Strategic Business Impact.
+        </h2>
+
+        <div class="title-line"></div>
+
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-icon">⚖️</div>
+          <h3>Business Law</h3>
+          <p>
+            From formation to governance,
+            we help businesses build solid legal foundations.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📄</div>
+          <h3>Contracts & Agreements</h3>
+          <p>
+            Strategic drafting and negotiation
+            to protect your interests and drive results.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Risk & Compliance</h3>
+          <p>
+            Proactive guidance to manage risk
+            and ensure regulatory compliance.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💻</div>
+          <h3>Technology Law</h3>
+          <p>
+            Modern legal solutions for technology,
+            privacy, and digital transformation.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">👥</div>
+          <h3>Dispute Resolution</h3>
+          <p>
+            Effective advocacy to resolve disputes
+            and protect what matters most.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       ABOUT SECTION
+  ========================== -->
+
+  <section class="section about">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <span>About NIA Legal Solutions</span>
+
+          <h2>
+            Legal Expertise.
+            Business Insight.
+            Future Focused.
+          </h2>
+
+          <p>
+            We combine deep legal knowledge with strategic
+            thinking and technology-driven solutions to deliver
+            practical, efficient, and forward-looking counsel.
+          </p>
+
+          <a href="#" class="outline-btn">
+            Learn More About Us
+          </a>
+
+        </div>
+
+        <div class="about-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+            alt="Office Boardroom"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CTA
+  ========================== -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>
+          Let’s align on solutions
+          that move your business forward.
+        </h2>
+
+        <a href="#" class="btn">
+          Schedule a Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-logo">
+
+          <h2>NIA</h2>
+
+          <p>
+            Where Law, Strategy and Technology Align
+          </p>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Practice Areas</li>
+            <li>Industries</li>
+            <li>Insights</li>
+            <li>Contact</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>Practice Areas</h4>
+
+          <ul>
+            <li>Business Law</li>
+            <li>Contracts & Agreements</li>
+            <li>Risk & Compliance</li>
+            <li>Technology Law</li>
+            <li>Dispute Resolution</li>
+          </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>Contact Us</h4>
+
+          <ul>
+            <li>+27 (0) 12 555 0198</li>
+            <li>nia@nialegalsolutions.com</li>
+            <li>www.nialegalsolutions.com</li>
+            <li>Johannesburg, South Africa</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 NIA Legal Solutions.
+          All rights reserved.
+        </p>
+
+        <p>
+          Privacy Policy | Terms of Use
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
