@@ -1,0 +1,21 @@
+{
+  "name": "nia-legal-solutions",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "nenenkosi",
+  "license": "MIT",
+  "scripts": {
+    "open": "open index.html",
+    "clean": "rm -rf ./y && mkdir y",
+    "copy-files": "cp -rv ./*.html ./y/ && cp -rv ./assets ./y/ || echo 'No files found in src directory'",
+    "build": "yarn run clean && yarn run copy-files",
+    "serve": "firebase serve --only hosting",
+    "deploy": "yarn run build && firebase deploy --only hosting"
+  },
+  "dependencies": {
+    "open": "^10.1.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.16.0"
+  }
+}

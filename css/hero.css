@@ -1,0 +1,19 @@
+/* ============================================================
+   HERO — full-width headline over skyline background
+   ============================================================ */
+
+.hero {
+  position: relative; overflow: hidden;
+  background-image:
+    linear-gradient(90deg, rgba(250,248,245,.96) 0%, rgba(250,248,245,.82) 32%, rgba(250,248,245,.35) 58%, rgba(250,248,245,.12) 100%),
+    url("../assets/hero-skyline.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+.hero .wrap { padding-top: clamp(80px, 12vw, 150px); padding-bottom: clamp(80px, 12vw, 150px); }
+.hero-copy { max-width: 760px; }
+.hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 700; margin-top: 20px; line-height: 1.14; }
+.hero .rule { width: 64px; height: 3px; background: var(--gold); margin: 26px 0; }
+.hero p { font-size: 19px; max-width: 520px; margin-bottom: 40px; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
