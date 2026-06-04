@@ -9,15 +9,8 @@
     "rewrites": [
       {
         "source": "!(/.well-known/acme-challenge/**)",
-        "destination": "https://nialegalsolutions.co.za"
+        "destination": "/index.html"
       }
-    ],
-    "redirects": [
-  {
-    "source": "!(/.well-known/acme-challenge/**)",
-    "destination": "https://nialegalsolutions.co.za/",
-    "type": 301
-  }
-]
+    ]
   }
 }
