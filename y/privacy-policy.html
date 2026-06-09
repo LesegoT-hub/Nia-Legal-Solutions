@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | NIA Legal Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1B2A4A;
+      --navy-dark: #111d33;
+      --navy-mid: #223460;
+      --gold: #bf8b33;
+      --gold-light: #cda050;
+      --gold-pale: #f5edd8;
+      --cream: #faf8f4;
+      --text: #2c2c2c;
+      --text-light: #6b6b6b;
+      --border: #e0d9cc;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 72px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: 0.08em; }
+    .logo-tag { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 400; color: var(--gold); letter-spacing: 0.22em; text-transform: uppercase; margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 10px 22px; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    .hero { background: var(--navy); padding: 64px 48px 56px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 420px; height: 100%; background: linear-gradient(135deg, transparent 40%, rgba(184,151,90,0.07)); pointer-events: none; }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 54px); font-weight: 600; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+    .hero-meta { color: rgba(255,255,255,0.5); font-size: 13px; letter-spacing: 0.04em; }
+    .hero-meta span { color: var(--gold); font-weight: 500; }
+
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 56px 48px 80px; display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start; }
+
+    .toc { position: sticky; top: 96px; background: #fff; border: 1px solid var(--border); border-top: 3px solid var(--gold); padding: 28px 24px; border-radius: 2px; }
+    .toc-title { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .toc ol { list-style: none; counter-reset: toc-counter; }
+    .toc ol li { counter-increment: toc-counter; margin-bottom: 6px; }
+    .toc ol li::before { content: counter(toc-counter, decimal-leading-zero) ". "; color: var(--gold); font-size: 11px; font-weight: 600; }
+    .toc ol li a { color: var(--text-light); text-decoration: none; font-size: 12.5px; line-height: 1.4; transition: color 0.2s; }
+    .toc ol li a:hover { color: var(--navy); }
+
+    .content { min-width: 0; }
+    .notice-box { background: var(--navy); color: rgba(255,255,255,0.9); padding: 28px 32px; margin-bottom: 40px; border-left: 4px solid var(--gold); font-size: 13.5px; line-height: 1.75; font-weight: 300; }
+    .notice-box strong { color: var(--gold); font-weight: 600; display: block; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+    .attention-box { background: var(--gold-pale); border: 1px solid #ddc98a; border-left: 4px solid var(--gold); padding: 20px 24px; margin: 24px 0; font-size: 13.5px; color: var(--navy); line-height: 1.7; }
+
+    section.policy-section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+    section.policy-section:last-child { border-bottom: none; }
+    .section-number { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
+    h2.section-heading { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--navy); margin-bottom: 20px; line-height: 1.25; }
+    h3.sub-heading { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy-mid); margin: 24px 0 12px; }
+
+    p { font-size: 14.5px; color: var(--text); margin-bottom: 14px; line-height: 1.8; }
+    p strong { color: var(--navy); font-weight: 600; }
+
+    .clause { display: flex; gap: 16px; margin-bottom: 12px; }
+    .clause-num { min-width: 52px; font-size: 12px; font-weight: 600; color: var(--gold); padding-top: 2px; letter-spacing: 0.04em; }
+    .clause-body { flex: 1; font-size: 14.5px; line-height: 1.8; color: var(--text); }
+    .clause-body strong { color: var(--navy); }
+    .sub-clause .clause-num { min-width: 60px; color: var(--navy-mid); font-weight: 500; }
+
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .info-card { background: #fff; border: 1px solid var(--border); border-top: 2px solid var(--gold); padding: 18px 20px; }
+    .info-card-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .info-card-value { font-size: 13.5px; color: var(--navy); font-weight: 500; line-height: 1.5; }
+
+    footer { background: var(--navy-dark); color: rgba(255,255,255,0.6); padding: 48px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 28px; }
+    .footer-tagline { font-size: 12.5px; color: rgba(255,255,255,0.45); margin-top: 12px; line-height: 1.6; }
+    .footer-col-title { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 13px; color: rgba(255,255,255,0.55); }
+    .footer-contact-icon { color: var(--gold); font-size: 14px; margin-top: 2px; }
+    .footer-bottom { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer-bottom a:hover, .footer-bottom a.active { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .page-wrap { grid-template-columns: 1fr; padding: 32px 24px 60px; }
+      .toc { position: static; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 24px 40px; }
+      .info-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/index.html" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="18" y1="4" x2="18" y2="32" stroke="#B8975A" stroke-width="1.5"/>
+      <line x1="6" y1="4" x2="30" y2="4" stroke="#B8975A" stroke-width="1.5"/>
+      <line x1="10" y1="31" x2="26" y2="31" stroke="#B8975A" stroke-width="1.5"/>
+      <line x1="6" y1="4" x2="2" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+      <line x1="30" y1="4" x2="34" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+      <path d="M2 13 Q4 18 6 13" stroke="#B8975A" stroke-width="1.2" fill="none"/>
+      <path d="M30 13 Q32 18 34 13" stroke="#B8975A" stroke-width="1.2" fill="none"/>
+      <line x1="2" y1="13" x2="6" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+      <line x1="30" y1="13" x2="34" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-name">NIA</span>
+      <span class="logo-tag">Legal Solutions</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About Us</a></li>
+    <li><a href="/practice-areas/index.html">Practice Areas</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="/contact.html" class="nav-cta">Schedule a Consultation</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Legal &amp; Compliance</p>
+    <h1>Privacy Policy</h1>
+    <p class="hero-meta">Effective date: <span>1 January 2026</span> &nbsp;|&nbsp; NIA Legal Solutions (Pty) Ltd &nbsp;|&nbsp; Governed by <span>POPIA</span></p>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <aside class="toc">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#scope">Scope of the Privacy Policy</a></li>
+      <li><a href="#applies-to">What and Who Does This Apply To?</a></li>
+      <li><a href="#personal-info">What is Personal Information?</a></li>
+      <li><a href="#special-info">Special Personal Information</a></li>
+      <li><a href="#when-process">When Will We Process Special PI?</a></li>
+      <li><a href="#collection">How We Collect Your PI</a></li>
+      <li><a href="#use">How We Use Your PI</a></li>
+      <li><a href="#compulsory">Compulsory Personal Information</a></li>
+      <li><a href="#sharing">Sharing of Your PI</a></li>
+      <li><a href="#storage">Storage &amp; Transfer</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#retention">Retention of Your PI</a></li>
+      <li><a href="#maintenance">Maintenance of Your PI</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#marketing">Direct Marketing</a></li>
+      <li><a href="#third-party">Third Party Sites</a></li>
+      <li><a href="#laws">CPA, POPIA &amp; Other Laws</a></li>
+      <li><a href="#general">General</a></li>
+      <li><a href="#queries">Queries &amp; Contact Details</a></li>
+    </ol>
+  </aside>
+
+  <article class="content">
+
+    <div class="notice-box">
+      <strong>Important Notice</strong>
+      THIS NIA LEGAL SOLUTIONS PRIVACY POLICY ("PRIVACY POLICY") APPLIES TO HOW WE COLLECT, USE AND PROCESS YOUR PERSONAL INFORMATION AND, IN SOME INSTANCES, SPECIAL PERSONAL INFORMATION. PLEASE READ THIS PRIVACY POLICY CAREFULLY.
+    </div>
+
+    <div class="attention-box">
+      All of the provisions of this Privacy Policy are important, but please pay special attention to the parts that are in <strong>bold writing</strong>. These parts contain information about provisions that have special consequences for you. These parts are only intended to bring such provisions to your attention, and, where necessary, to explain their fact, nature and effect. Where explanations are given, they may be contained in a box. Such boxed explanations are aids to understanding only and are not provisions themselves. They do not limit the meaning or application of the provisions, and do not apply only to the situations and examples described in the boxes or only to similar situations or examples.
+    </div>
+
+    <section class="policy-section" id="scope">
+      <span class="section-number">Section 01</span>
+      <h2 class="section-heading">Scope of the Privacy Policy</h2>
+      <h3 class="sub-heading">1.1 Introduction and Scope</h3>
+      <div class="clause"><span class="clause-num">1.1.1</span><span class="clause-body">Nia Legal Solutions ("NLS" or "we" or "us" or "our") conducts its business as a consultancy business with offices in Johannesburg (90 Rivonia Road, Sandton, Johannesburg). NLS is a responsible party (or data controller, in some jurisdictions) in respect of your Personal Information (as defined in clause 3.1 below), and Special Personal Information (as defined in clause 4.1 below), which means that NLS determines the purpose of and means for processing your Personal Information.</span></div>
+      <div class="clause"><span class="clause-num">1.1.2</span><span class="clause-body">NLS is committed to protecting and respecting your privacy. We strive to ensure that our use of your Personal Information is lawful, reasonable, and relevant to our business activities, with the ultimate goal of improving our services and your experience.</span></div>
+      <div class="clause"><span class="clause-num">1.1.3</span><span class="clause-body">We have appointed an Information Officer who is responsible for overseeing questions in relation to the Privacy Policy. You may contact our Information Officer at <a href="mailto:consultant@nialegalsolutions.co.za" style="color:var(--gold);">consultant@nialegalsolutions.co.za</a> to discuss this Privacy Policy or your rights under data protection legislation that is applicable to you.</span></div>
+      <div class="clause"><span class="clause-num">1.1.4</span><span class="clause-body">This Privacy Policy describes how we will treat your Personal Information, whether provided by you to us, or collected by us through other means when you engage with us, in your ordinary use of our products and services, in providing us with your products and services, or in accessing our website (the "Website").</span></div>
+      <div class="clause"><span class="clause-num">1.1.5</span><span class="clause-body">This Privacy Policy must, as is appropriate, be read together with NLS's Website Terms of Use (accessible <a href="/terms-of-use.html" style="color:var(--gold);">here</a>) (the "Terms") and any other documents or agreements between NLS and you (the "Agreements") that describe the manner in which we, in specific circumstances, collect or process Personal Information about you. This will enable you to understand the manner in which NLS will process your Personal Information. This Privacy Policy supplements such Terms and Agreements, but does not supersede them and in the event of any conflict, ambiguity or inconsistency between this Privacy Policy, the Terms and/or the Agreements, such documents shall be construed in the following order of priority:</span></div>
+      <div class="clause"><span class="clause-num">1.1.6</span><span class="clause-body">this Privacy Policy;</span></div>
+      <div class="clause"><span class="clause-num">1.1.7</span><span class="clause-body">the Terms; and</span></div>
+      <div class="clause"><span class="clause-num">1.1.8</span><span class="clause-body">the Agreements.</span></div>
+      <h3 class="sub-heading">1.2 Your Consent to the Processing of Your Personal Information</h3>
+      <div class="clause"><span class="clause-num">1.2.1</span><span class="clause-body">We may collect, receive, record, organise, collate, store, update, change, retrieve, read, consult, use, share or erase your Personal Information in the ways set out in this Privacy Policy. When we do one or more of these actions with your Personal Information, we are "Processing" your Personal Information (and "process" has a corresponding meaning).</span></div>
+      <div class="clause"><span class="clause-num">1.2.2</span><span class="clause-body"><strong>If you are concerned about any aspect of this Privacy Policy as it relates to your Personal Information, please do not continue to engage with us, use our Website or our products and services.</strong></span></div>
+      <div class="clause"><span class="clause-num">1.2.3</span><span class="clause-body">We may, where permitted or required to do so by applicable law, process your Personal Information without your knowledge or permission, if sufficient grounds of justification are present, and we will do so in accordance with the further provisions of this Privacy Policy.</span></div>
+    </section>
+
+    <section class="policy-section" id="applies-to">
+      <span class="section-number">Section 02</span>
+      <h2 class="section-heading">What and Who Does This Privacy Policy Apply To?</h2>
+      <div class="clause"><span class="clause-num">2.1</span><span class="clause-body">This Privacy Policy applies to the processing by us or on our behalf, and our successors-in-title, of the Personal Information relating to you, being a user who accesses and/or uses our Website or our products and services, or a provider of products and services to us, clients, suppliers, former employees, prospective employees and other data subjects that engage with us. This Privacy Policy applies regardless of the device which you use to access our Website or to engage with us, which device is capable of using, or enabled to use, the Website including, but not limited to, internet-connected mobile devices and tablets ("Access Device").</span></div>
+      <div class="clause"><span class="clause-num">2.2</span><span class="clause-body">This Privacy Policy does not apply to the processing of Personal Information by other third parties relating to or by means of other parties' websites, products or services, such as websites linked to, from or advertised on the Website or through our products and services, or sites which link to or advertise the Website or our products, services and lawyers.</span></div>
+    </section>
+
+    <section class="policy-section" id="personal-info">
+      <span class="section-number">Section 03</span>
+      <h2 class="section-heading">What is Personal Information?</h2>
+      <div class="clause"><span class="clause-num">3.1</span><span class="clause-body">"Personal Information" refers to private information about an identifiable living natural person or, where applicable, an identifiable existing juristic person. Personal Information does not include information that does not identify you (including in instances where that information has been de-identified so that it does not identify a person). The Personal Information that we collect about you may differ on the basis of your engagement with us or the products and services that you receive from NLS or that you provide to NLS.</span></div>
+      <div class="clause"><span class="clause-num">3.2</span><span class="clause-body">We may process various types of Personal Information about you, as follows:</span></div>
+      <div class="info-grid">
+        <div class="info-card"><p class="info-card-label">Identity Information</p><p class="info-card-value">Name, username, marital status, title, occupation, interests, date of birth, gender, race, legal status, identity documents, photographs, identity number, registration number and qualifications.</p></div>
+        <div class="info-card"><p class="info-card-label">Contact Information</p><p class="info-card-value">Billing addresses, delivery addresses, e-mail addresses, cellphone and telephone numbers.</p></div>
+        <div class="info-card"><p class="info-card-label">Financial Information</p><p class="info-card-value">Bank account details, insurance information, financial statements, tax clearance certificates and VAT registration numbers.</p></div>
+        <div class="info-card"><p class="info-card-label">Transaction Information</p><p class="info-card-value">Details about payments made to or received from you and company information, which may consist of financial activity.</p></div>
+        <div class="info-card"><p class="info-card-label">Technical Information</p><p class="info-card-value">IP address, login data, browser type and version, time zone, operating system and platform, and other technology on the devices you use.</p></div>
+        <div class="info-card"><p class="info-card-label">Usage Information</p><p class="info-card-value">Information about your access to and use of the Website, products and services, including links visited and content accessed.</p></div>
+        <div class="info-card"><p class="info-card-label">Location Information</p><p class="info-card-value">Geographical information from your Access Device (usually based on GPS or IP location).</p></div>
+        <div class="info-card"><p class="info-card-label">Marketing &amp; Communications</p><p class="info-card-value">Your preferences in respect of receiving marketing information from us and our third parties, and your communication preferences.</p></div>
+      </div>
+      <div class="clause"><span class="clause-num">3.3</span><span class="clause-body">NLS may also process, collect, store and/or use aggregated data, which may include historical or statistical data ("Aggregated Data") for any purpose, including for know-how and research purposes. Aggregated Data may be derived from your Personal Information but is not always considered Personal Information, as this data does not directly or indirectly reveal your identity. However, if we combine or connect Aggregated Data with your Personal Information in a manner that has the result that it can directly or indirectly identify you, we will treat the combined data as Personal Information, which will be managed in accordance with this Privacy Policy.</span></div>
+    </section>
+
+    <section class="policy-section" id="special-info">
+      <span class="section-number">Section 04</span>
+      <h2 class="section-heading">Special Personal Information</h2>
+      <div class="clause"><span class="clause-num">4.1</span><span class="clause-body">We hereby notify you that, in certain circumstances, by engaging with NLS, we may collect certain Special Personal Information about you. "Special Personal Information" refers to details about your religious or philosophical beliefs, race or ethnic origin, trade union membership, political persuasion, health or sex life, biometric information or information about your criminal offences or convictions.</span></div>
+      <div class="clause"><span class="clause-num">4.2</span><span class="clause-body">The processing of Special Personal Information requires higher levels of protection. We need to have further justifications for processing Special Personal Information. NLS has implemented appropriate policies and safeguards, which we are required by law to maintain, to process Special Personal Information.</span></div>
+    </section>
+
+    <section class="policy-section" id="when-process">
+      <span class="section-number">Section 05</span>
+      <h2 class="section-heading">When Will We Process Your Special Personal Information?</h2>
+      <div class="clause"><span class="clause-num">5.1</span><span class="clause-body">We will generally not process Special Personal Information about you unless it is necessary for establishing, exercising or defending a right or obligation in law, or where we have obtained your consent to do so. On rare occasions, there may be other reasons for processing your Special Personal Information, such as where the information has been deliberately made public by you. The situations in which we may process your Special Personal Information include the following:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">5.1.1</span><span class="clause-body">racial and ethnic information may be processed by NLS;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">5.1.2</span><span class="clause-body">as part of the onboarding, recruitment and hiring process, we may process information relating to your criminal behaviour;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">5.1.3</span><span class="clause-body">we may process information pertaining to your political persuasion as part of the know your client (KYC) processes and customer due diligence (CDD) checks; and</span></div>
+      <div class="clause sub-clause"><span class="clause-num">5.1.5</span><span class="clause-body">we may process information which indicates your religious beliefs (for example, when you attend events organised by NLS, we may ask you for your dietary requirements, and this may indicate your religious beliefs).</span></div>
+    </section>
+
+    <section class="policy-section" id="collection">
+      <span class="section-number">Section 06</span>
+      <h2 class="section-heading">How We Collect Your Personal Information</h2>
+      <div class="clause"><span class="clause-num">6.1</span><span class="clause-body">We collect your Personal Information in the following ways:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.1.1</span><span class="clause-body">through direct or active interactions with you;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.1.2</span><span class="clause-body">through automated or passive interactions with you; and</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.1.3</span><span class="clause-body">from third parties and public sources.</span></div>
+      <h3 class="sub-heading">6.2 Direct or Active Collection from You</h3>
+      <div class="clause"><span class="clause-num">6.2.1</span><span class="clause-body">We may require that you submit certain information:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.2.1.1</span><span class="clause-body">to enable you to access portions of the Website;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.2.1.2</span><span class="clause-body">to subscribe to our publications;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.2.1.3</span><span class="clause-body">to request marketing or information about our events to be sent to you;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.2.1.4</span><span class="clause-body">to request a consultation;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.2.1.5</span><span class="clause-body">to make contact with our consultants and employees;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.2.1.6</span><span class="clause-body">to enable you to facilitate the conclusion of an agreement with us; and</span></div>
+      <div class="clause sub-clause"><span class="clause-num">6.2.1.7</span><span class="clause-body">that is necessary for our fulfilment of our statutory or regulatory obligations.</span></div>
+      <div class="clause"><span class="clause-num">6.2.2</span><span class="clause-body">We also collect Personal Information directly from you when you communicate directly with us, for example when you complete certain application forms (including client onboarding forms such as KYC forms, CDD checks, and vendor forms), via e-mail, telephone calls, feedback forms, registering for and attending events, giving us your business card, site comments or forums.</span></div>
+      <div class="clause"><span class="clause-num">6.2.3</span><span class="clause-body">If you contact us, we reserve the right to retain a record of that correspondence in accordance with our Record Retention Policy and applicable data protection legislation, which may include Personal Information.</span></div>
+      <div class="clause"><span class="clause-num">6.2.4</span><span class="clause-body">The Personal Information that we actively collect from you may include any of the Personal Information listed in clause 3.2 of this Privacy Policy and, in some instances, certain Special Personal Information listed in clause 5.1 of this Privacy Policy.</span></div>
+      <h3 class="sub-heading">6.3 Passive Collection from Your Access Device</h3>
+      <div class="clause"><span class="clause-num">6.3.1</span><span class="clause-body">We may passively collect certain of your Personal Information from the Access Device that you use to access and navigate the Website, by way of various technological applications, for instance, using server logs to collect and maintain log information.</span></div>
+      <div class="clause"><span class="clause-num">6.3.2</span><span class="clause-body">We also use cookies and anonymous identifiers which enable our computer system to recognise you when you next visit the Website to distinguish you from other users and to improve our service to you, and which can be used to enhance the content of the Website and make it more user-friendly, as well as to give you a more personalised experience.</span></div>
+      <div class="clause"><span class="clause-num">6.3.3</span><span class="clause-body">A cookie is a small piece of data (an alphanumeric identifier) which our computer system transfers to your Access Device through your web browser when you visit the Website and which is stored in your web browser. When you visit the Website again, the cookie allows the site to recognise your browser. Cookies may store user preferences and other information.</span></div>
+      <div class="clause"><span class="clause-num">6.3.4</span><span class="clause-body">You may disable the use of cookies by configuring your browser to refuse all cookies or to indicate when a cookie is being sent. However, please note that some parts of the Website will not function properly if you refuse cookies and you may not be able to enjoy all of the features and functionality of the Website.</span></div>
+      <div class="clause"><span class="clause-num">6.3.5</span><span class="clause-body">The Personal Information that we passively collect from your Access Device may include your Identity Information, your Contact Information, your Technical Information, your Profile Information, your Usage Information, your Location Information and your Marketing and Communications Information, or any other Personal Information which you permit us, from time to time, to passively collect from your Access Device.</span></div>
+      <h3 class="sub-heading">6.4 Collection from Third Parties and Public Sources</h3>
+      <p>NLS receives Personal Information and Special Personal Information about you from various third parties including agencies, suppliers of background checks services and publicly available sources.</p>
+    </section>
+
+    <section class="policy-section" id="use">
+      <span class="section-number">Section 07</span>
+      <h2 class="section-heading">How We Use Your Personal Information</h2>
+      <div class="clause"><span class="clause-num">7.1</span><span class="clause-body">We use your Personal Information for the following purposes:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.1</span><span class="clause-body">to provide legal services to our clients;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.2</span><span class="clause-body">in connection with the use of artificial intelligence tools and other software and platforms (including, without limitation, Microsoft 365 Copilot, e-signature platforms, virtual data rooms, contract management software, e-discovery software, data analytics tools, due diligence and document review tools, drafting and research tools, data analysis tools, large language models, agentic models and similar tools or technologies) in the provision of legal services to our clients and/or the procurement of products and services from our suppliers;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.3</span><span class="clause-body">in relation to matter-related documents and information, for legal research, referencing and drafting (i.e. documents are re-used for know-how purposes);</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.4</span><span class="clause-body">to invest funds on behalf of our clients;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.5</span><span class="clause-body">to comply with our regulatory reporting obligations;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.6</span><span class="clause-body">to comply with our statutory obligations, including client identification and verification as part of our KYC and CDD obligations, and any screening we may need to conduct when you access our premises to comply with any relevant regulations or protocols;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.7</span><span class="clause-body">to conduct the recruitment and hiring processes, which includes conducting criminal record and credit checks (where appropriate), the capturing of a job applicant's details and providing status updates to job applicants;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.8</span><span class="clause-body">in relation to supplier information, to create supplier profiles on our systems, pay suppliers, and for general supplier administration;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.9</span><span class="clause-body">to maintain and improve the Website and to improve the experience of our Website users, including by requesting feedback from our Website users on our products and services and to facilitate the procurement of our products and services;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.10</span><span class="clause-body">to retain and make information available to you on the Website;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.11</span><span class="clause-body">to maintain and update our client, or potential client databases;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.12</span><span class="clause-body">to maintain and update our supplier database;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.13</span><span class="clause-body">to maintain and update a database consisting of, inter alia, arbitrators, advocates, experts and/or local counsel who assist us in the provision of legal services to our clients;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.14</span><span class="clause-body">to establish and verify your identity on the Website;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.15</span><span class="clause-body">to operate, administer, secure and develop the Website and the performance and functionality of the Website;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.16</span><span class="clause-body">to detect, prevent or manage actual or alleged fraud, security breaches or the abuse, misuse or unauthorised use of our systems and files, the Website and/or contraventions of this Privacy Policy and/or the Terms and/or the Agreements;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.17</span><span class="clause-body">to inform you about any changes to the Website, this Privacy Policy or other changes that are relevant to you;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.18</span><span class="clause-body">to create user profiles, compile and use statistical information (including non-personal information) about you and other users and their access to the Website and to analyse and compare how you and other users make use of the Website, including (without limitation) their browsing habits, click-patterns, preferences, frequency and times of use, trends and demographic information including recommendations to users and tailoring information and content for users;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.19</span><span class="clause-body">to conduct market research surveys;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.20</span><span class="clause-body">to offer you information and content which is more appropriately tailored for you as far as reasonably possible;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.21</span><span class="clause-body">to provide you with the latest information about our products and services or events provided that you have agreed to receive such information;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.22</span><span class="clause-body">for security, administrative and legal purposes;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.23</span><span class="clause-body">for client relations purposes, which may include storage of clients' marital status and birthdates;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.24</span><span class="clause-body">pitching, opportunity tracking and reporting;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.25</span><span class="clause-body">campaign tracking and reporting;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.26</span><span class="clause-body">to communicate with you and retain a record of our communications with you and your communications with us;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.27</span><span class="clause-body">to fulfil any contractual obligations that we may have to you or any third party;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.28</span><span class="clause-body">to invite you to webinars, functions or events that we may host alone or in conjunction with our alliance partners, affiliated firms or other law firms with whom NLS has collaboration arrangements;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.29</span><span class="clause-body">to analyse and compare the types of Access Devices that you and other users make use of and your physical location; and</span></div>
+      <div class="clause sub-clause"><span class="clause-num">7.1.30</span><span class="clause-body">for other activities and/or purposes which are lawful, reasonable and adequate, relevant and not excessive in relation to the provision of our services and/or the use of the Website, our business activities or such other purpose for which it was collected.</span></div>
+      <div class="clause"><span class="clause-num">7.2</span><span class="clause-body">NLS will obtain your permission before collecting or using your Personal Information and/or Special Personal Information for any other purpose.</span></div>
+    </section>
+
+    <section class="policy-section" id="compulsory">
+      <span class="section-number">Section 08</span>
+      <h2 class="section-heading">Compulsory Personal Information and Consequences of Not Sharing It</h2>
+      <div class="clause"><span class="clause-num">8.1</span><span class="clause-body">The following information is compulsory Personal Information:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">8.1.1</span><span class="clause-body">your name and surname;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">8.1.2</span><span class="clause-body">your contact details, such as your email address and/or your telephone number.</span></div>
+      <div class="clause"><span class="clause-num">8.2</span><span class="clause-body">Depending on the nature of your engagement or relationship with us, other types of Personal Information may be necessary, including:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">8.2.1</span><span class="clause-body">financial (including bank account details, tax information);</span></div>
+      <div class="clause sub-clause"><span class="clause-num">8.2.2</span><span class="clause-body">names and registration numbers as contained in documents issued by the Companies and Intellectual Property Commission and the South African Revenue Service; and</span></div>
+      <div class="clause sub-clause"><span class="clause-num">8.2.3</span><span class="clause-body">information which may be necessary to ensure our compliance with the Financial Intelligence Centre Act, 38 of 2001.</span></div>
+      <div class="clause"><span class="clause-num">8.3</span><span class="clause-body">All other Personal Information is optional. If you do not agree to share the above-mentioned compulsory Personal Information with us, then you will not be able to engage with us, supply your products or services to us or make full use of our products and services and/or the features that are offered to Website users, including products and services which are available on the Website. If you do not agree to share your optional information with us, then you might not be able to engage with us fully, be paid for your products and services or receive complete and accurate products and services from us or enjoy all of the features and functionality on the Website, including certain content and products and services.</span></div>
+      <div class="attention-box"><strong>In the clause above, you agree and accept that there is certain compulsory Personal Information you must provide us with if you want to engage with us fully, supply your products or services to us and/or enjoy all of the features and functionality on the Website. If you decide not to provide us with such compulsory Personal Information, you agree that we may limit our engagement with you, our procurement of your goods and services and certain features and functionality on the Website.</strong></div>
+    </section>
+
+    <section class="policy-section" id="sharing">
+      <span class="section-number">Section 09</span>
+      <h2 class="section-heading">Sharing of Your Personal Information</h2>
+      <div class="clause"><span class="clause-num">9.1</span><span class="clause-body">We will not intentionally disclose your Personal Information, whether for commercial gain or otherwise, other than with your permission, as permitted by applicable law or in the manner as set out in this Privacy Policy.</span></div>
+      <div class="clause"><span class="clause-num">9.2</span><span class="clause-body">You agree and give permission for us to share your Personal Information under the following circumstances:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.1</span><span class="clause-body">with our agents, advisers and suppliers that have agreed to be bound by applicable data protection legislation and this Privacy Policy or similar terms, which offer the same level of protection as this Privacy Policy;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.2</span><span class="clause-body">with clients, when we receive requests for assistance in matters that require the experience or expertise of, inter alia, arbitrators, advocates, experts and/or local counsel;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.3</span><span class="clause-body">with our employees, clients, suppliers, consultants, contractors and agents for the provision of our services or to the extent necessary for them to process such Personal Information on our behalf, to provide services to or for us. This includes, but is not limited to, our know-who database, know-how and research, pitching to other clients to obtain further instructions; reporting purposes (e.g. the South African Revenue Service); hosting, development and administration, technical support and other support services relating to the Website or the operation of our business; and the use of artificial intelligence tools and other software and platforms in the provision of our services and/or the procurement of products and services from our suppliers. We will authorise any Personal Information processing done by a third party on our behalf, amongst other things by entering into written agreements with those third parties which will govern our relationship with them. These agreements will include provisions such as confidentiality, non-disclosure and data protection. If they fail to meet their obligations in terms of the agreements, these third parties may be disciplined, their contracts terminated, or other appropriate action taken;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.5</span><span class="clause-body">to enable us to enforce or apply our Terms and/or any Agreement you have with us;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.6</span><span class="clause-body">to enable us to monitor web traffic: web servers serving the website automatically collect information about pages you visit. This information is used for internal review, to tailor information to individual visitors and for traffic audits;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.7</span><span class="clause-body">for statistics purposes: we may perform statistical analyses in order to measure interest in the various areas of the Website (for product development purposes);</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.8</span><span class="clause-body">to protect our rights, property or safety or that of our clients, employees, contractors, suppliers, agents and any other third party;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">9.2.9</span><span class="clause-body">with governmental agencies and other regulatory or self-regulatory bodies, if required to do so by law or when we reasonably believe that such action is necessary to:</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">9.2.9.1</span><span class="clause-body">comply with the law or with any legal process;</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">9.2.9.2</span><span class="clause-body">protect and defend the rights, property or safety of NLS, or our clients, employees, contractors, suppliers, agents or any third party;</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">9.2.9.3</span><span class="clause-body">detect, prevent or manage actual or alleged fraud, security breaches, technical issues, or the abuse, misuse or unauthorised use of the Website and/or contraventions of this Privacy Policy; and/or</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">9.2.9.4</span><span class="clause-body">protect the rights, property or safety of members of the public (if you provide false or deceptive information or misrepresent yourself, we may proactively disclose such information to the appropriate regulatory bodies and/or commercial entities).</span></div>
+      <div class="clause"><span class="clause-num">9.3</span><span class="clause-body">We will get your permission before disclosing your Personal Information to any third party for any other purpose, if we are required by law to do so.</span></div>
+    </section>
+
+    <section class="policy-section" id="storage">
+      <span class="section-number">Section 10</span>
+      <h2 class="section-heading">Storage and Transfer of Your Personal Information</h2>
+      <div class="clause"><span class="clause-num">10.1</span><span class="clause-body">We store your Personal Information on:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">10.1.1</span><span class="clause-body">our premises, in the form of hard copies;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">10.1.2</span><span class="clause-body">the premises of third party service providers such as document storage service providers;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">10.1.3</span><span class="clause-body">our servers; or</span></div>
+      <div class="clause sub-clause"><span class="clause-num">10.1.4</span><span class="clause-body">on the servers of our third party service providers, such as IT systems or hosting service providers.</span></div>
+      <div class="clause"><span class="clause-num">10.2</span><span class="clause-body">In the event of the scenarios contemplated in clauses 10.1.2 and 10.1.4, we will ensure that we have entered into written agreements with those third party service providers governing our relationship with them that require them to secure the integrity and confidentiality of Personal Information in their possession by taking appropriate, reasonable technical and organisational measures.</span></div>
+      <div class="clause"><span class="clause-num">10.3</span><span class="clause-body">From time to time, NLS and its service providers may need to transfer to and/or store your Personal Information on servers in a jurisdiction other than where it was collected (i.e. outside of South Africa) and we hereby notify you that such jurisdiction may not have comparable data protection legislation.</span></div>
+      <div class="clause"><span class="clause-num">10.4</span><span class="clause-body">If the location to which Personal Information is transferred and/or is stored does not have substantially similar laws to those of South Africa, which provide for the protection of Personal Information, we will take reasonably practicable steps, including the imposition of appropriate contractual terms to ensure that your Personal Information is adequately protected in that jurisdiction.</span></div>
+      <div class="clause"><span class="clause-num">10.5</span><span class="clause-body">Please contact us if you require further information as to the specific mechanisms used by us when transferring your Personal Information outside of South Africa or to a jurisdiction that is different to the one in which we collected your Personal Information.</span></div>
+    </section>
+
+    <section class="policy-section" id="security">
+      <span class="section-number">Section 11</span>
+      <h2 class="section-heading">Security</h2>
+      <div class="clause"><span class="clause-num">11.1</span><span class="clause-body">We take reasonable technical and organisational measures to secure the integrity of your Personal Information and using accepted technological standards to prevent unauthorised access to or disclosure of your Personal Information, and protect your Personal Information from misuse, loss, alteration and destruction.</span></div>
+      <div class="clause"><span class="clause-num">11.2</span><span class="clause-body">We review our information collection, storage and processing practices, including physical security measures periodically, to ensure that we keep abreast of good practice.</span></div>
+      <div class="clause"><span class="clause-num">11.3</span><span class="clause-body">We also create a back-up of your information for operational, business continuity and safety purposes and we have a back-up disaster recovery program.</span></div>
+      <div class="clause"><span class="clause-num">11.4</span><span class="clause-body"><strong>Despite the above measures being taken when processing Personal Information and Special Personal Information, subject to the provisions of this clause 11.4, as far as the law allows, we will not be liable for any loss, claim and/or damage arising from any unauthorised access, disclosure, misuse, loss, alteration or destruction of your Personal Information and/or Special Personal Information.</strong></span></div>
+      <div class="clause"><span class="clause-num">11.5</span><span class="clause-body">NLS has implemented policies and procedures to address actual and suspected data breaches and undertakes to notify you and the relevant regulatory authorities of breaches in instances in which NLS is legally required to do so and within the period in which such notification is necessary.</span></div>
+      <div class="attention-box"><strong>In this clause, you acknowledge that you know, and you accept that technology is not absolutely secure and there is a risk that your Personal Information and Special Personal Information will not be secure when processed by means of technology. We do not promise that we can keep your Personal Information and Special Personal Information completely secure. To the maximum extent permitted by law, you will not be able to take action against us if you suffer losses or damages in these circumstances.</strong></div>
+    </section>
+
+    <section class="policy-section" id="retention">
+      <span class="section-number">Section 12</span>
+      <h2 class="section-heading">Retention of Your Personal Information</h2>
+      <div class="clause"><span class="clause-num">12.1</span><span class="clause-body">We may keep your Personal Information for as long as you continue to engage with us, provide services or products to us, access the Website and content and/or use our products and/or services or for as long as reasonably necessary or until you contact us and ask us to destroy it.</span></div>
+      <div class="clause"><span class="clause-num">12.2</span><span class="clause-body">Aside from clause 12.1 above and any other clause in this Privacy Policy, we may retain and process some or all of your Personal Information if and for as long as:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">12.2.1</span><span class="clause-body">we are required or permitted by law, a code of conduct or a contract with you to do so;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">12.2.2</span><span class="clause-body">we reasonably need it for lawful purposes related to the performance of our functions and activities;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">12.2.3</span><span class="clause-body">we reasonably require it for evidentiary purposes; or</span></div>
+      <div class="clause sub-clause"><span class="clause-num">12.2.4</span><span class="clause-body">you agree to us retaining it for a specified further period.</span></div>
+      <div class="clause"><span class="clause-num">12.3</span><span class="clause-body">To determine the appropriate retention period for Personal Information, NLS will consider, among other things, the nature and sensitivity of the Personal Information, the potential risks or harm that may result from its unauthorised use or disclosure, the purposes for which we process it and whether those purposes may be achieved through other means. NLS will always comply with applicable legal, regulatory, tax, accounting or other requirements as they pertain to the retention of Personal Information, as well as our Record Retention Policy.</span></div>
+    </section>
+
+    <section class="policy-section" id="maintenance">
+      <span class="section-number">Section 13</span>
+      <h2 class="section-heading">Maintenance of Your Personal Information</h2>
+      <div class="clause"><span class="clause-num">13.1</span><span class="clause-body">Where required by law, NLS will take all reasonable steps to ensure that your Personal Information is accurate, complete, not misleading and up to date.</span></div>
+      <div class="clause"><span class="clause-num">13.2</span><span class="clause-body">We also acknowledge that you may have rights of access to, and the right to rectify, your Personal Information, and rights to object to the processing of your Personal Information in certain circumstances (clause 14 below contains further information about these rights).</span></div>
+      <div class="clause"><span class="clause-num">13.3</span><span class="clause-body">You must let us know if any of the Personal Information that we have about you is incorrect, incomplete, misleading or out of date, by notifying us at the contact details set out in clause 1.1.3 above or where applicable, by notifying your NLS contact.</span></div>
+      <div class="clause"><span class="clause-num">13.4</span><span class="clause-body">Where required by law, we will take reasonable steps to correct or update your Personal Information accordingly, having regard to the purpose for which such Personal Information was collected or used.</span></div>
+    </section>
+
+    <section class="policy-section" id="rights">
+      <span class="section-number">Section 14</span>
+      <h2 class="section-heading">Your Rights</h2>
+      <div class="clause"><span class="clause-num">14.1</span><span class="clause-body">Data protection legislation may confer certain rights on you in respect of your Personal Information. We aim to be clear about what Personal Information we collect so that you can make meaningful choices about what Personal Information you make available to us. You may, for example:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.1</span><span class="clause-body">Block all cookies, by setting your browser to do so, including cookies associated with our products and services or to indicate when a cookie is being sent by us.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.2</span><span class="clause-body">Request access to your Personal Information (commonly known as a "data subject access request"), which indicates what Personal Information we have about you.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.3</span><span class="clause-body">Request the correction of your Personal Information, in order to ensure that any incomplete or inaccurate Personal Information is corrected.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.4</span><span class="clause-body">Request erasure of your Personal Information, where there is no lawful basis for the retention or continued processing of it.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.5</span><span class="clause-body">Object to the processing of your Personal Information for a legitimate interest (or those of a third party) and there is something about your particular situation which makes you want to object to processing on this ground as you feel it impacts on your fundamental rights and freedoms.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.6</span><span class="clause-body">Request restriction of processing of your Personal Information. This enables you to ask NLS to suspend the processing of your Personal Information in limited circumstances, which may differ by jurisdiction.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.7</span><span class="clause-body">Withdraw consent which you previously gave to the processing of your Personal Information at any time. The withdrawal of your consent can only be made by you on condition that such withdrawal of your consent:</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">14.1.7.1</span><span class="clause-body">does not affect the processing of your Personal Information before the withdrawal of your consent; or</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">14.1.7.2</span><span class="clause-body">does not affect the processing of your Personal Information if the processing is in compliance with an obligation imposed by law on us; or</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">14.1.7.3</span><span class="clause-body">does not affect the processing of your Personal Information where such processing is necessary for the proper performance of a public law duty by a public body; or</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">14.1.7.4</span><span class="clause-body">does not affect the processing of your Personal Information as required to finalise the performance of a contract in which you are a party; or</span></div>
+      <div class="clause sub-clause"><span class="clause-num" style="min-width:76px">14.1.7.5</span><span class="clause-body">does not affect the processing of your Personal Information as required to protect your legitimate interests or our own legitimate interests or the legitimate interests of a third party to whom the information is supplied.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.8</span><span class="clause-body">Withdrawal of consent may limit our ability to provide certain products and services to you or the ability of a third party to provide certain products or services to you, but will not affect the continued processing of your Personal Information in instances in which your consent is not required.</span></div>
+      <div class="clause sub-clause"><span class="clause-num">14.1.9</span><span class="clause-body">Institute civil proceedings regarding an alleged interference with the protection of your Personal Information processed in accordance with this Privacy Policy.</span></div>
+      <div class="clause"><span class="clause-num">14.2</span><span class="clause-body">As far as the law allows, we may charge a fee for attending to any of the above requests, and may also refuse to carry out any of your requests in whole or in part.</span></div>
+    </section>
+
+    <section class="policy-section" id="changes">
+      <span class="section-number">Section 15</span>
+      <h2 class="section-heading">Changes to This Privacy Policy</h2>
+      <p>To the extent allowed by the law, this Privacy Policy may be amended and updated from time to time in our sole discretion, without notice, provided that if we do so, we will post the revised policy on the Website and we will take reasonably practicable steps to inform you of the updated Privacy Policy. Accordingly, please check this Privacy Policy for changes periodically. If you continue to engage with us, provide products or services to us or access or use the Website and/or products and services after amendments are made to the Privacy Policy and displayed on this Website, you will be deemed to have accepted the updated Privacy Policy.</p>
+    </section>
+
+    <section class="policy-section" id="children">
+      <span class="section-number">Section 16</span>
+      <h2 class="section-heading">Children</h2>
+      <div class="clause"><span class="clause-num">16.1</span><span class="clause-body">The Website and our products or services are not targeted at people under the age of 18.</span></div>
+      <div class="clause"><span class="clause-num">16.2</span><span class="clause-body">We may in limited instances process Personal Information of children including in the course of providing services to you. In such cases, the processing of Personal Information of children is conducted with the consent of a competent person or to comply with an obligation in law.</span></div>
+      <div class="clause"><span class="clause-num">16.3</span><span class="clause-body">We will not knowingly collect Personal Information of persons in this age group without express consent to do so or without a legal obligation to do so.</span></div>
+      <div class="clause"><span class="clause-num">16.4</span><span class="clause-body">For any questions in respect of the processing of Personal Information of children, please contact the Information Officer or your NLS contact.</span></div>
+    </section>
+
+    <section class="policy-section" id="marketing">
+      <span class="section-number">Section 17</span>
+      <h2 class="section-heading">Direct Marketing</h2>
+      <div class="clause"><span class="clause-num">17.1</span><span class="clause-body">NLS processes Personal Information for the purpose of direct marketing by way of electronic communication. We will only send you direct marketing materials if you have specifically opted-in to receive these materials, or if you are a client of NLS, at all times in accordance with applicable laws.</span></div>
+      <div class="clause"><span class="clause-num">17.2</span><span class="clause-body">If you complete the subscription form on the Website, you agree to receive marketing communication from us.</span></div>
+      <div class="clause"><span class="clause-num">17.3</span><span class="clause-body">You may refuse to accept, require us to discontinue, or pre-emptively block any approach or communication from us if that approach or communication is primarily for the purpose of direct marketing ("direct marketing communications").</span></div>
+      <div class="clause"><span class="clause-num">17.4</span><span class="clause-body">You may opt out of receiving direct marketing communication from us at any time by requesting us (in any manner, whether telephonically, electronically, in writing or in person) to stop providing any direct marketing communication to you. You may send your opt-out requests to <a href="mailto:consultant@nialegalsolutions.co.za" style="color:var(--gold);">consultant@nialegalsolutions.co.za</a>.</span></div>
+    </section>
+
+    <section class="policy-section" id="third-party">
+      <span class="section-number">Section 18</span>
+      <h2 class="section-heading">Third Party Sites</h2>
+      <p>This Privacy Policy does not apply to the websites of any other parties, or the applications, products or services such websites advertise and which may be linked to our Website, or websites that link to or advertise on our Website.</p>
+      <p>We are not responsible for the privacy practices of such third party websites, or for any claims, loss or damage arising from these.</p>
+      <p>We advise you to read the privacy policy of each third party website and decide whether you agree to their privacy practices and policies, as these third party websites may also be collecting or sharing your Personal Information and Special Personal Information.</p>
+    </section>
+
+    <section class="policy-section" id="laws">
+      <span class="section-number">Section 19</span>
+      <h2 class="section-heading">Consumer Protection Act, POPIA and Other Laws</h2>
+      <p>If this Privacy Policy or any provision in this Privacy Policy is regulated by or subject to the Consumer Protection Act, 68 of 2008, the Protection of Personal Information Act, 4 of 2013 ("POPIA") or other laws, it is not intended that any provision of this Privacy Policy contravenes any provision of the Consumer Protection Act, POPIA or such other laws. Therefore all provisions of this Privacy Policy must be treated as being qualified, to the extent necessary, to ensure that the provisions of the Consumer Protection Act, POPIA and such other laws are complied with.</p>
+      <div class="clause"><span class="clause-num">19.1</span><span class="clause-body">No provision of this Privacy Policy:</span></div>
+      <div class="clause sub-clause"><span class="clause-num">19.1.1</span><span class="clause-body">does or purports to limit or exempt us from any liability (including, without limitation, for any loss directly or indirectly attributable to our gross negligence or wilful default or that of any other person acting for or controlled by us) to the extent that the law does not allow such a limitation or exemption;</span></div>
+      <div class="clause sub-clause"><span class="clause-num">19.1.2</span><span class="clause-body">requires you to assume risk or liability for the kind of liability or loss, to the extent that the law does not allow such an assumption of risk or liability; or</span></div>
+      <div class="clause sub-clause"><span class="clause-num">19.1.3</span><span class="clause-body">limits or excludes any warranties or obligations which are implied into this Privacy Policy by the Consumer Protection Act (to the extent applicable), POPIA (to the extent applicable), or other applicable laws or which we give under the Consumer Protection Act (to the extent applicable), POPIA (to the extent applicable), or other applicable laws, to the extent that the law does not allow them to be limited or excluded.</span></div>
+    </section>
+
+    <section class="policy-section" id="general">
+      <span class="section-number">Section 20</span>
+      <h2 class="section-heading">General</h2>
+      <div class="clause"><span class="clause-num">20.1</span><span class="clause-body">You agree that this Privacy Policy, our relationship and any dispute of whatsoever nature relating to or arising out of this Privacy Policy whether directly or indirectly is governed by South African law, without giving effect to any principle of conflict of laws.</span></div>
+      <div class="clause"><span class="clause-num">20.2</span><span class="clause-body">You agree that we may, at any time, transfer, cede, delegate or assign any or all of our rights and obligations under this Privacy Policy without your permission. We will notify you if we transfer, cede, delegate or assign any rights or obligations to a third party, but we do not have to notify you if we transfer, cede, delegate or assign any rights or obligations to any person which acquires all or part of our business and/or assets. We may in certain instances, also sub-contract our obligations, for example, engaging with external IT service providers or printers. Where we engage such sub-contractors, we will do so without your permission and we do not have to notify you if we sub-contract any of our obligations.</span></div>
+      <div class="clause"><span class="clause-num">20.3</span><span class="clause-body">Subject to clause 20.2, this Privacy Policy shall apply for the benefit of and be binding on each party's successors and assigns.</span></div>
+      <div class="clause"><span class="clause-num">20.4</span><span class="clause-body">Our failure to exercise or enforce any right or provision of this Privacy Policy shall not constitute a waiver of such right or provision.</span></div>
+      <div class="clause"><span class="clause-num">20.5</span><span class="clause-body">Each provision of this Privacy Policy, and each part of any provision, is removable and detachable from the others. As far as the law allows, if any provision (or part of a provision) of this Privacy Policy is found by a court or authority of competent jurisdiction to be illegal, invalid or unenforceable (including without limitation, because it is not consistent with the law of another jurisdiction), it must be treated as if it was not included in this Privacy Policy and the rest of this Privacy Policy will still be valid and enforceable.</span></div>
+    </section>
+
+    <section class="policy-section" id="queries">
+      <span class="section-number">Section 21</span>
+      <h2 class="section-heading">Queries and Contact Details of the Information Regulator</h2>
+      <div class="clause"><span class="clause-num">21.1</span><span class="clause-body">Should you feel that your rights in respect of your Personal Information have been infringed, please address your concerns to the Information Officer at <a href="mailto:consultant@nialegalsolutions.co.za" style="color:var(--gold);">consultant@nialegalsolutions.co.za</a>. If you feel that the attempts by NLS to resolve the matter have been inadequate, you may lodge a complaint with the South African Information Regulator by accessing their website at <a href="https://inforegulator.org.za/" target="_blank" rel="noopener" style="color:var(--gold);">https://inforegulator.org.za/</a>.</span></div>
+      <div class="clause"><span class="clause-num">21.2</span><span class="clause-body">If you are located outside of South Africa, you may contact the appropriate regulator in your country of domicile.</span></div>
+      <div class="info-grid" style="margin-top:32px;">
+        <div class="info-card"><p class="info-card-label">Information Officer</p><p class="info-card-value"><a href="mailto:consultant@nialegalsolutions.co.za" style="color:var(--navy);text-decoration:none;">consultant@nialegalsolutions.co.za</a></p></div>
+        <div class="info-card"><p class="info-card-label">Phone</p><p class="info-card-value"><a href="tel:+27739262717" style="color:var(--navy);text-decoration:none;">073 926 2717</a></p></div>
+        <div class="info-card"><p class="info-card-label">Physical Address</p><p class="info-card-value">Blue Hills, Midrand<br>Johannesburg 1685</p></div>
+        <div class="info-card"><p class="info-card-label">Information Regulator (SA)</p><p class="info-card-value"><a href="https://inforegulator.org.za/" target="_blank" style="color:var(--navy);text-decoration:none;">inforegulator.org.za</a></p></div>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="18" y1="4" x2="18" y2="32" stroke="#B8975A" stroke-width="1.5"/>
+          <line x1="6" y1="4" x2="30" y2="4" stroke="#B8975A" stroke-width="1.5"/>
+          <line x1="10" y1="31" x2="26" y2="31" stroke="#B8975A" stroke-width="1.5"/>
+          <line x1="6" y1="4" x2="2" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+          <line x1="30" y1="4" x2="34" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+          <path d="M2 13 Q4 18 6 13" stroke="#B8975A" stroke-width="1.2" fill="none"/>
+          <path d="M30 13 Q32 18 34 13" stroke="#B8975A" stroke-width="1.2" fill="none"/>
+          <line x1="2" y1="13" x2="6" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+          <line x1="30" y1="13" x2="34" y2="13" stroke="#B8975A" stroke-width="1.2"/>
+        </svg>
+        <div class="logo-text"><span class="logo-name">NIA</span><span class="logo-tag">Legal Solutions</span></div>
+      </div>
+      <p class="footer-tagline">Where Law, Strategy<br>and Technology Align</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Quick Links</p>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/practice-areas/index.html">Practice Areas</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/contact.html">Schedule a Consultation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Practice Areas</p>
+      <ul>
+        <li><a href="/practice-areas/index.html">Business Law</a></li>
+        <li><a href="/practice-areas/index.html">Contracts &amp; Agreements</a></li>
+        <li><a href="/practice-areas/index.html#risk">Risk &amp; Compliance</a></li>
+        <li><a href="/practice-areas/index.html">Technology Law</a></li>
+        <li><a href="/practice-areas/index.html">Dispute Resolution</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contact Us</p>
+      <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><span>073 926 2717</span></div>
+      <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><span>consultant@nialegalsolutions.co.za</span></div>
+      <div class="footer-contact-item"><span class="footer-contact-icon">🌐</span><span>www.nialegalsolutions.co.za</span></div>
+      <div class="footer-contact-item"><span class="footer-contact-icon">📍</span><span>Blue Hills, Midrand<br>Johannesburg 1685</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NIA Legal Solutions. All rights reserved.</span>
+    <span><a href="/privacy-policy.html" class="active">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms-of-use.html">Terms of Use</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
